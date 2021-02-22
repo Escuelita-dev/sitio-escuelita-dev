@@ -244,7 +244,7 @@ img{
   font-size: 15px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   padding: 17px 40px;
-  background-color: #ff7162;
+  background-color: #ff7162!important;
   line-height: 26px;
   color: #ffffff !important;
   font-weight: 900;
@@ -4860,6 +4860,7 @@ h3 a:hover{
 
 .class-details .inner-box .bold-text p {
   margin-top: 23px;
+  margin-bottom: 23px;  
 }
 
 .class-details .inner-box .info-box li:first-child:before,
@@ -7763,33 +7764,33 @@ h3 a:hover{
   margin-bottom: 29px;
 }
 
-/** contact-form-section **/
+/** escuelita-form-section **/
 
-.contact-form-section{
+.escuelita-form-section{
   position: relative;
   display: block;
   background: #f0ede7;
 }
 
-.contact-form-section .sec-title{
+.escuelita-form-section .sec-title{
   position: relative;
   display: block;
   margin-bottom: 40px;
 }
 
-.contact-form-section .contact-form .form-group{
+.escuelita-form-section .escuelita-form .form-group{
   position: relative;
   display: block;
   margin-bottom: 20px;
 }
 
-.contact-form-section .contact-form .form-group:last-child{
+.escuelita-form-section .escuelita-form .form-group:last-child{
   margin-bottom: 0px;
 }
 
-.contact-form-section .contact-form .form-group input[type='text'],
-.contact-form-section .contact-form .form-group input[type='email'],
-.contact-form-section .contact-form .form-group textarea{
+.escuelita-form-section .escuelita-form .form-group input[type='text'],
+.escuelita-form-section .escuelita-form .form-group input[type='email'],
+.escuelita-form-section .escuelita-form .form-group textarea{
   position: relative;
   display: block;
   width: 100%;
@@ -7803,19 +7804,19 @@ h3 a:hover{
   transition: all 500ms ease;
 }
 
-.contact-form-section .contact-form .form-group textarea{
+.escuelita-form-section .escuelita-form .form-group textarea{
   height: 170px;
   resize: none;
   margin-bottom: 30px;
 }
 
-.contact-form-section .contact-form .form-group input:focus,
-.contact-form-section .contact-form .form-group textarea:focus{
+.escuelita-form-section .escuelita-form .form-group input:focus,
+.escuelita-form-section .escuelita-form .form-group textarea:focus{
   border-color: #ff7162;
 }
 
-.contact-form-section .contact-form .form-group input::-webkit-input-placeholder,
-.contact-form-section .contact-form .form-group textarea::-webkit-input-placeholder{
+.escuelita-form-section .escuelita-form .form-group input::-webkit-input-placeholder,
+.escuelita-form-section .escuelita-form .form-group textarea::-webkit-input-placeholder{
   color:#2b3c6b;
 }
 
@@ -7871,4 +7872,18 @@ h3 a:hover{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.bold-text h1 {
+  position: relative;
+  display: block;
+  font-size: 40px;
+  line-height: 50px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 900;
+  color: #2b3c6b;
+}
+
+.modal-body {
+  padding: 0px!important;
 }

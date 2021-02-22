@@ -48,7 +48,6 @@
                       <li><a href="/">Inicio</a></li>
                       <li><a href="/#acerca">Acerca</a></li> 
                       <li><a href="/cursos/">Cursos</a></li> 
-                      <li><a href="/webinarios/">Webinarios</a></li> 
                       <li><a href="/#contact">Contacto</a></li>                                        
                     </ul>
                   </div>

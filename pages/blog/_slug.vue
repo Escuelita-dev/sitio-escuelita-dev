@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import { getSinglePost } from '../api/posts';
+  import { getSinglePost } from '../../api/posts';
 
   export default {
     async asyncData ({ params }) {

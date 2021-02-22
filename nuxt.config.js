@@ -1,3 +1,5 @@
+import conf from './utils/conf'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -29,16 +31,10 @@ export default {
         src: "/js/popper.min.js"
       },
       {
-        src: "/js/bootstrap.min.js"
-      },
-      {
         src: "/js/owl.js"
       },
       {
         src: "/js/wow.js"
-      },
-      {
-        src: "/js/validation.js"
       },
       {
         src: "/js/jquery.fancybox.js"
@@ -86,7 +82,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/strapi',
+    '@nuxtjs/markdownit',
+    'bootstrap-vue/nuxt',
   ],
+  strapi: {
+    entities: ['profesors', 'cursos'],
+    url: conf.strapiBaseUri
+  },  
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
