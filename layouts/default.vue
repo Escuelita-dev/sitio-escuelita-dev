@@ -9,6 +9,8 @@
           <div class="inner-container clearfix">
             <div class="social-links pull-left">
               <ul class="social-list">    
+                  <li><a href="https://www.instagram.com/escuelita.dev/"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/escuelita-dev/"><i class="fab fa-linkedin"></i></a></li>                  
               </ul>
           </div>
           <div class="header-info pull-right">

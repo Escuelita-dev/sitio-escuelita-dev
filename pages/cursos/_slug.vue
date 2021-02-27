@@ -56,23 +56,7 @@
                                     <div class="bold-text" v-html="$md.render(curso.descripcion_larga)">
                                     </div>
                                     <div v-if="!!curso.Temario && !!curso.Temario.Modulo.length">
-                                        <h3>Temario del curso</h3>
-                                        <div class="bold-text">
-                                            <p>El curso se divide en {{curso.Temario.Modulo.length }} módulos</p>
-                                        </div>
-                                        <ul class="accordion-box active-block">
-                                            <li v-for="(modulo, index) in curso.Temario.Modulo" :key="index" :class="{accordion: true, block: true, 'active-block': index == 0}">
-                                                <div :class="{'acc-btn': true, active: index==0}">
-                                                    <div class="icon-outer"><i class="fas fa-angle-down"></i></div>
-                                                    <h4>MÓDULO {{ index + 1 }}. {{ modulo.Titulo }}</h4>
-                                                </div>
-                                                <div class="acc-content current" :style="{display: index == 0 ? 'block' : 'none'}">
-                                                    <div class="content">
-                                                        <div class="text">{{ modulo.Contenido }}</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                        <Temario :temario="curso.Temario"/>
                                     </div>
                                 </div>
                             </div>

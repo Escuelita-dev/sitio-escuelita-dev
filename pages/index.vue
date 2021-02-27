@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="style-two">
-        <div style="background-image:url(/images/main-slider/slider-paisaje-escuelita.jpg)">
+        <div style="background-image:url(/images/fondo-head-home-escuelita-escuela-programacion-niños.jpg)">
             <div class="container py-5">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="video-container">
