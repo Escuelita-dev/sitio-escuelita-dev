@@ -493,7 +493,7 @@ img{
 
 .main-header .header-top{
   position: relative;
-  display: block;
+  display: block;  
   background: #008BB0;
   width: 100%;
   padding: 16px 0px 17px 0px;
@@ -7819,6 +7819,63 @@ h3 a:hover{
 .escuelita-form-section .escuelita-form .form-group textarea::-webkit-input-placeholder{
   color:#2b3c6b;
 }
+
+/** escuelita-form-section **/
+
+.contact-form-section{
+  position: relative;
+  display: block;
+  background: #f0ede7;
+}
+
+.contact-form-section .sec-title{
+  position: relative;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.contact-form-section .contact-form .form-group{
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.contact-form-section .contact-form .form-group:last-child{
+  margin-bottom: 0px;
+}
+
+.contact-form-section .contact-form .form-group input[type='text'],
+.contact-form-section .contact-form .form-group input[type='email'],
+.contact-form-section .contact-form .form-group textarea{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #2b3c6b;
+  transition: all 500ms ease;
+}
+
+.contact-form-section .contact-form .form-group textarea{
+  height: 170px;
+  resize: none;
+  margin-bottom: 30px;
+}
+
+.contact-form-section .contact-form .form-group input:focus,
+.contact-form-section .contact-form .form-group textarea:focus{
+  border-color: #ff7162;
+}
+
+.contact-form-section .contact-form .form-group input::-webkit-input-placeholder,
+.contact-form-section .contact-form .form-group textarea::-webkit-input-placeholder{
+  color:#2b3c6b;
+}
+
 
 /** google-map-section **/
 

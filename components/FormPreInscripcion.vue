@@ -26,7 +26,7 @@
                             <p>Nos pondremos en contacto a la primer oportunidad de acceder al curso.</p>
                         </div>                          
                         <div v-else class="escuelita-form">
-                            <div v-if="errores.length > 0" class="alert alert-danger"><ul><li v-for="(error, index) in errores" :key="index">{{ error }}</li></ul></div>                            
+                            <div v-if="errores.length > 0" class="alert alert-danger"><ul><li v-for="(error, index) in errores" :key="index">{{ error }}</li></ul></div>
                             <form id="escuelita-form" class="default-form" @submit.stop.prevent="handleSubmit"> 
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">

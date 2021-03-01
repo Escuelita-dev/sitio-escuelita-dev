@@ -15,7 +15,7 @@
                 </div>
                 <ul class="bread-crumb clearfix">
                     <li><a href="/">Inicio</a></li>
-                    <li><a href="/cursos/">Cursos</a></li>
+                    <li><a href="/cursos">Cursos</a></li>
                 </ul>
             </div>
         </section>
@@ -102,15 +102,9 @@
 </template>
 
 <script>
-import conf from '../../utils/conf'
 import { getStrapiMedia } from '../../utils/medias'
 
 export default {
-    data: function () {
-        return {
-            cdnUri: conf.strapiBaseUri
-        }
-    },
     async asyncData ({ params, $strapi }) {
         const cursos = await $strapi.find("cursos", {
             slug: params.slug,

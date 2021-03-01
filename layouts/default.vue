@@ -47,10 +47,21 @@
                   </div>
                   <div class="navbar-collapse collapse clearfix">
                     <ul class="navigation clearfix">
-                      <li><a href="/">Inicio</a></li>
-                      <li><a href="/#acerca">Acerca</a></li> 
-                      <li><a href="/cursos/">Cursos</a></li> 
-                      <li><a href="/#contact">Contacto</a></li>                                        
+                      <li>
+                        <NuxtLink to="/">Inicio</NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/acerca">Acerca</NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/cursos">Cursos</NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/blog">Blog</NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/contacto">Contacto</NuxtLink>
+                      </li>
                     </ul>
                   </div>
                 </nav>
@@ -75,11 +86,11 @@
                 </div>
                 <div class="navbar-collapse collapse clearfix">
                   <ul class="navigation clearfix">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/#acerca">Acerca</a></li> 
-                    <li><a href="/cursos/">Cursos</a></li>
-                    <li><a href="/webinarios/">Webinarios</a></li> 
-                    <li><a href="/#contact">Contacto</a></li>
+                      <li><NuxtLink to="/">Inicio</NuxtLink></li>
+                      <li><NuxtLink to="/acerca">Acerca</NuxtLink></li>
+                      <li><NuxtLink to="/cursos">Cursos</NuxtLink></li>
+                      <li><NuxtLink to="/blog">Blog</NuxtLink></li>
+                      <li><NuxtLink to="/contacto">Contacto</NuxtLink></li>                                        
                   </ul>
                 </div>
               </nav>
@@ -120,10 +131,10 @@
                                 <h3 class="widget-title">Enlaces Útiles</h3>
                                 <div class="widget-content">
                                     <ul>
-                                        <li><a href="/#acerca">Acerca de Nosotros</a></li>
-                                        <li><a href="/cursos/">Cursos Gratis</a></li>
-                                        <li><a href="/webinarios/">Webinarios Gratis</a></li> 
-                                        <li><a href="/#contact">Contacto</a></li>
+                                      <li><NuxtLink to="/acerca">Acerca</NuxtLink></li>
+                                      <li><NuxtLink to="/cursos">Cursos</NuxtLink></li>
+                                      <li><NuxtLink to="/blog">Blog</NuxtLink></li>
+                                      <li><NuxtLink to="/contacto">Contacto</NuxtLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -133,7 +144,7 @@
                                 <h3 class="widget-title">Ponte en Contacto</h3>
                                 <div class="widget-content">
                                     <ul class="info-list">
-                                         <li><i class="fas fa-home"></i>Boulevard Doctor Manuel Herrera Y Obes 4316, Montevideo, Uruguay</li>
+                                         <li><i class="fas fa-home"></i>Tiburcio Gómez 1330 Piso 2, Montevideo, Uruguay</li>
                                         <li><i class="fas fa-envelope"></i><a href="mailto:info@example.com">hola@escuelita.dev</a></li>
                                     </ul>
                                 </div>
