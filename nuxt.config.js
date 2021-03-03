@@ -6,9 +6,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'sitio-escuelita-dev',
+    title: 'Escuelita.dev - Escuela de Programación para niños y jóvenes',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'es'
     },
     bodyAttrs: {
       class: 'boxed_wrapper'
@@ -16,7 +16,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Somos una escuela de programación para niñas, niños, y jóvenes sin fines de lucro. Enseñamos programación para hacer a nuestros niños más felices ahora y apoyarles para que tengan un mejor futuro.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' },
