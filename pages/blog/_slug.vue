@@ -29,7 +29,7 @@
                                 <div class="top-content">
                                     <h4>{{ moment(noticia.published_at).format("DD MMM YYYY") }}</h4>
                                     <h1>{{ noticia.titulo }}</h1>                                    
-                                    <Contenido v-for="(parte, index) in noticia.contenido" :contenido="parte" :key="index"/>
+                                    <Contenido v-for="(parte, index) in noticia.Contenido" :contenido="parte" :key="index"/>
                                 </div>                                
                             </div>
                             <!-- <div class="post-share-option">
