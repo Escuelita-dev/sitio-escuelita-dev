@@ -6,6 +6,7 @@
         </div>
         <div v-else-if="contenido.__component === 'blog.imagen'">
             <figure class="image-box"><img :src="getStrapiMedia(contenido.Imagen.url)" :alt="contenido.Caption"></figure>
+            <div>{{ contenido.Caption }}</div>
         </div>        
     </span>
 </template>
