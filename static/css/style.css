@@ -7944,3 +7944,7 @@ h3 a:hover{
 .modal-body {
   padding: 0px!important;
 }
+
+.cursor-pointer {
+  cursor:pointer;
+}

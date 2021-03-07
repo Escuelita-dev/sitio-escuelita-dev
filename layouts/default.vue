@@ -39,25 +39,28 @@
                 <nav class="main-menu navbar-expand-lg">
                   <div class="navbar-header">
                   <!-- Toggle Button -->      
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" @click="mostrar = !mostrar">
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
                   </div>
-                  <div class="navbar-collapse collapse clearfix">
+                  <div :class="{'navbar-collapse': true, 'collapse': true, 'clearfix': true, 'show': mostrar}">
                     <ul class="navigation clearfix">
                       <li>
                         <NuxtLink to="/">Inicio</NuxtLink>
-                      </li>
-                      <li>
-                        <NuxtLink to="/acerca">Acerca</NuxtLink>
                       </li>
                       <li>
                         <NuxtLink to="/cursos">Cursos</NuxtLink>
                       </li>
                       <li>
                         <NuxtLink to="/blog">Blog</NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/preguntas-frecuentes">Preguntas</NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/acerca">Acerca</NuxtLink>
                       </li>
                       <li>
                         <NuxtLink to="/contacto">Contacto</NuxtLink>
@@ -78,18 +81,19 @@
               <nav class="main-menu navbar-expand-lg">
                 <div class="navbar-header">
                   <!-- Toggle Button -->      
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <button type="button" class="navbar-toggle" @click="mostrar = !mostrar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   </button>
                 </div>
-                <div class="navbar-collapse collapse clearfix">
+                <div :class="{'navbar-collapse': true, 'collapse': true, 'clearfix': true, 'show': mostrar}">
                   <ul class="navigation clearfix">
                       <li><NuxtLink to="/">Inicio</NuxtLink></li>
-                      <li><NuxtLink to="/acerca">Acerca</NuxtLink></li>
                       <li><NuxtLink to="/cursos">Cursos</NuxtLink></li>
                       <li><NuxtLink to="/blog">Blog</NuxtLink></li>
+                      <li><NuxtLink to="/acerca">Acerca</NuxtLink></li>
+                      <li><NuxtLink to="/preguntas-frecuentes">Preguntas</NuxtLink></li>
                       <li><NuxtLink to="/contacto">Contacto</NuxtLink></li>                                        
                   </ul>
                 </div>
@@ -131,9 +135,10 @@
                                 <h3 class="widget-title">Enlaces Útiles</h3>
                                 <div class="widget-content">
                                     <ul>
-                                      <li><NuxtLink to="/acerca">Acerca</NuxtLink></li>
                                       <li><NuxtLink to="/cursos">Cursos</NuxtLink></li>
                                       <li><NuxtLink to="/blog">Blog</NuxtLink></li>
+                                      <li><NuxtLink to="/acerca">Acerca</NuxtLink></li>
+                                      <li><NuxtLink to="/preguntas-frecuentes">Preguntas</NuxtLink></li>
                                       <li><NuxtLink to="/contacto">Contacto</NuxtLink></li>
                                     </ul>
                                 </div>
@@ -201,3 +206,13 @@
 
 <style>
 </style>
+
+<script>
+export default {
+  data: function () {
+    return {
+      mostrar: false
+    }
+  }
+}
+</script>
