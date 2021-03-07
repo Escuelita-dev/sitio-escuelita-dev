@@ -19,7 +19,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div v-for="(noticia, index) in noticias" :key="index" class="col-lg-4 col-md-6 col-sm-12 news-block">
+                <div v-for="(noticia, index) in noticias" :key="index" class="col-lg-4 col-md-6 col-sm-12 news-block my-5">
                     <div class="news-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="inner-box">
                             <figure class="image-box">
