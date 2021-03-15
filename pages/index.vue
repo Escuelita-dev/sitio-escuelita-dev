@@ -11,41 +11,7 @@
             </div>
         </div>
     </section>
-
-    <!-- news-section -->
-    <section class="news-section" v-if="noticias.length > 0">
-        <div class="anim-icon">
-            <div class="icon icon-2 wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms"></div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div v-for="(noticia, index) in noticias" :key="index" class="col-lg-4 col-md-6 col-sm-12 news-block my-5">
-                    <div class="news-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <NuxtLink :to="{ name: 'blog-slug', params: { slug: noticia.slug } }">
-                                    <img :src="getStrapiMedia(noticia.ImagenTarjeta.url)" :alt="noticia.titulo">
-                                </NuxtLink>                                
-                            </figure>
-                            <div class="lower-content">
-                                <h3><NuxtLink :to="{ name: 'blog-slug', params: { slug: noticia.slug } }">{{ noticia.titulo }}</NuxtLink></h3>
-                                <ul class="info-box">
-                                    <li>{{ moment(noticia.published_at).format("DD MMM YYYY") }}</li>
-                                </ul>
-                                <!-- <div class="text">Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua.</div> -->
-                                <div class="link-btn wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                    <NuxtLink :to="{ name: 'blog-slug', params: { slug: noticia.slug } }"><i class="flaticon-next"></i></NuxtLink>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- news-section end -->   
-
+    
     <!-- classes-section -->
     <a name="cursos"></a>
     <section class="classes-section style-two sec-pad">
@@ -67,7 +33,22 @@
             </div>
         </div>
     </section>
-    <!-- classes-section end -->       
+    <!-- classes-section end -->     
+
+    <!-- news-section -->
+    <section class="news-section" v-if="noticias.length > 0">
+        <div class="anim-icon">
+            <div class="icon icon-2 wow zoomIn" data-wow-delay="00ms" data-wow-duration="1500ms"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <BlogCard v-for="(noticia, index) in noticias" :key="index" :noticia="noticia"/>
+            </div>
+        </div>
+    </section>
+    <!-- news-section end -->   
+
+  
 
     <!-- cta-section -->
     <a name="contact"></a>

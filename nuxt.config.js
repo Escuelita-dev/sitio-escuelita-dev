@@ -69,6 +69,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {src: '~/plugins/countryRegionSelect.js', mode: 'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -86,7 +87,25 @@ export default {
     '@nuxtjs/strapi',
     '@nuxtjs/markdownit',
     'bootstrap-vue/nuxt',
+    'nuxt-i18n',
   ],
+  i18n: {
+    locales: [
+      {
+        code: 'es',
+        file: 'es-ES.js'
+      }
+    ],
+    defaultLocale: 'es',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,  // recommended
+    },
+    lazy: true,    
+    langDir: 'lang/',    
+    strategy: 'no_prefix'
+  },
   strapi: {
     entities: ['profesors', 'cursos'],
     url: conf.strapiBaseUri

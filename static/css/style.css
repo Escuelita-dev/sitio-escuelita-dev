@@ -7788,8 +7788,24 @@ h3 a:hover{
   margin-bottom: 0px;
 }
 
+.escuelita-form-section .escuelita-form .form-group .vue-tel-input
+{
+  /* position: relative;
+  display: block;
+  width: 100%; */
+  height: 60px;
+  background: #fff;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #2b3c6b;
+  transition: all 500ms ease;
+}
+
 .escuelita-form-section .escuelita-form .form-group input[type='text'],
 .escuelita-form-section .escuelita-form .form-group input[type='email'],
+.escuelita-form-section .escuelita-form .form-group select,
 .escuelita-form-section .escuelita-form .form-group textarea{
   position: relative;
   display: block;
