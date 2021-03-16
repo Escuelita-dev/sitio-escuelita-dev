@@ -179,7 +179,7 @@ export default {
         personas: await $strapi.find("profesors"),
         cursos: await $strapi.find("cursos"),
         acerca: await $strapi.find('home-acerca-de'),
-        noticias: await $strapi.find('notas', {_limit: 4, _sort: 'published_at:desc'})
+        noticias: await $strapi.find('notas', {_limit: 4, _sort: 'fechaNoticia:desc'})
     }
   },
   methods: {

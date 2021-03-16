@@ -29,10 +29,7 @@ import { getStrapiMedia } from '../../utils/medias'
 export default {
     async asyncData ({ $strapi }) {
         return { 
-            personas: await $strapi.find("profesors"),
-            cursos: await $strapi.find("cursos"),
-            acerca: await $strapi.find('home-acerca-de'),
-            noticias: await $strapi.find('notas', {_sort: 'published_at:desc'})
+            noticias: await $strapi.find('notas', {_sort: 'fechaNoticia:desc'})
         }
     },
     methods: {

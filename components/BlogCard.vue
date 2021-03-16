@@ -10,7 +10,7 @@
                 <div class="lower-content">
                     <h3><NuxtLink :to="{ name: 'blog-slug', params: { slug: noticia.slug } }">{{ noticia.titulo }}</NuxtLink></h3>
                     <ul class="info-box">
-                        <li>{{ moment(noticia.published_at).format("DD MMM YYYY") }}</li>
+                        <li>{{ moment(noticia.fechaNoticia ? noticia.fechaNoticia : noticia.published_at).format("DD MMM YYYY") }}</li>
                     </ul>
                     <!-- <div class="text">Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua.</div> -->
                     <div class="link-btn">
