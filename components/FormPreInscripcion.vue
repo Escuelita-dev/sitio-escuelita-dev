@@ -103,8 +103,11 @@ export default {
             edad: '',
             la_mielcita: null,
             mensaje: '',
-            countries: ['UY', 'AR']
+            preInscripciones: 0
         }
+    },
+    mounted: async function() {
+        this.preInscripciones = await this.$strapi.count('pre-inscripcions', {'curso.id': this.curso.id})
     },
     methods: {
         paisTelefono(obj) {
