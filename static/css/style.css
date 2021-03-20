@@ -7226,7 +7226,7 @@ h3 a:hover{
 
 @media (min-width:1200px) {
   .blog-details .blog-details-content .bold-text p img{
-    width:50%
+    max-width:50%
   }  
 }
 
@@ -7239,7 +7239,7 @@ h3 a:hover{
 }
 
 .blog-details .blog-details-content .content-style-one .image-box img{
-  width: 100%;
+  max-width: 100%;
   border-radius: 20px;
 }
 

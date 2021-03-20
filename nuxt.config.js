@@ -69,7 +69,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '~/plugins/countryRegionSelect.js', mode: 'client'}
+    {src: '~/plugins/countryRegionSelect.js', mode: 'client'},
+    {src: '~/plugins/render.js'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -109,6 +110,20 @@ export default {
   strapi: {
     entities: ['profesors', 'cursos'],
     url: conf.strapiBaseUri
+  },
+  markdownit: {
+    linkify: true,
+    breaks: true,
+    use: [
+      'markdown-it-modify-token'
+    ],
+    modifyToken: function (token, env) {    
+      switch (token.type) {
+      case 'image': // set all images to 200px width except for foo.gif
+        token.attrObj.src = (env.baseUrl ? env.baseUrl : '') + token.attrObj.src
+        break;
+      }
+    }
   },  
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
