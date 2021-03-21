@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormPreInscripcion ref="formPreinscripcion" :curso="curso"/>
+        <FormInteresado ref="formInteresado" :curso="curso"/>
         <!--Page Title-->
         <section class="page-title centred" :style="'background-image: url('+ getStrapiMedia(curso.imagen_cabezal.url) +');'">
             <div class="position-absolute w-100 h-100 opacity-4 bg-dark"></div>
@@ -46,7 +46,7 @@
                                                 <h5>Programación</h5>
                                             </li>
                                             <li class="btn-box">
-                                                <b-button :class="'theme-btn'" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
+                                                <b-button :class="'theme-btn'" @click="abrirForm">QUIERO INSCRIBIRME</b-button>
                                             </li>
                                         </ul>
                                     </div>
@@ -116,7 +116,7 @@ export default {
     methods: {
         getStrapiMedia,
         abrirForm: function() {
-            this.$refs['formPreinscripcion'].abrir();
+            this.$refs['formInteresado'].abrir();
         }
     }
   }
