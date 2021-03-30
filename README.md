@@ -14,6 +14,10 @@ Conoce más de nuestro proyecto y corre la voz. Estamos en https://Escuelita.dev
 
 El sitio está hecho en el FrontEnd con [Nuxt.js](https://nuxtjs.org/) y el backend es principalmente [Strapi](https://strapi.io/).
 
+# Colaboran con Escuelita.dev
+
+[Gitbook](https://www.gitbook.com)
+
 # Licencia
 
 El código del sitio está bajo la licencia [MIT License](https://choosealicense.com/licenses/mit/)
