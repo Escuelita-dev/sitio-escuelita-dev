@@ -31,9 +31,6 @@ export default {
         src: "/js/popper.min.js"
       },
       {
-        src: "/js/owl.js"
-      },
-      {
         src: "/js/wow.js"
       },
       {
@@ -70,6 +67,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {src: '~/plugins/countryRegionSelect.js', mode: 'client'},
+    {src: '~/plugins/swiper.js'},
     {src: '~/plugins/render.js'}
   ],
 

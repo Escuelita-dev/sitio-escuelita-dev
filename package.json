@@ -19,7 +19,9 @@
     "moment": "^2.29.1",
     "nuxt": "^2.15.3",
     "nuxt-i18n": "^6.21.0",
+    "swiper": "^6.5.3",
     "ufo": "^0.6.10",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-country-code-select": "^1.6.7",
     "vue-tel-input": "^5.1.0"
   },
