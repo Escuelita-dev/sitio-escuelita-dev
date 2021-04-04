@@ -46,7 +46,7 @@
                                                 <h5>Programación</h5>
                                             </li>
                                             <li class="btn-box">
-                                                <b-button :class="'theme-btn'" @click="abrirForm">QUIERO INSCRIBIRME</b-button>
+                                                <b-button :class="'theme-btn'" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
                                             </li>
                                         </ul>
                                     </div>
@@ -105,6 +105,7 @@
 import { getStrapiMedia } from '../../utils/medias'
 
 export default {
+    layout: 'internoSinCabezal',
     async asyncData ({ params, $strapi }) {
         const cursos = await $strapi.find("cursos", {
             slug: params.slug,

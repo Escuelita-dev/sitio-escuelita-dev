@@ -87,6 +87,10 @@ export default {
     '@nuxtjs/markdownit',
     'bootstrap-vue/nuxt',
     'nuxt-i18n',
+    ['@netsells/nuxt-hotjar', { 
+      id: '2041320', 
+      sv: '6',
+    }]
   ],
   i18n: {
     locales: [
