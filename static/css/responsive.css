@@ -7,8 +7,8 @@
   }
 
   .page-title .content-box h1{
-    font-size: 66px!important; 
-    line-height: 90px!important;
+    font-size: 66px; 
+    line-height: 90px;
    }  
 }
 
@@ -831,7 +831,9 @@
     padding-top: 10px;
   }
 
-
+  .page-title .content-box {
+    padding-top: 0px;
+  }
 }
 
 

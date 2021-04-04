@@ -24,7 +24,7 @@
                             <p>Te tendremos al tanto de novedades, y ni bien se abran las inscripciones al curso te enviaremos un Email</p>
                         </div>                          
                         <div v-else class="escuelita-form">
-                            <div class="text-center mb-4">
+                            <div class="text-center mb-4 d-none d-md-block">
                                 <h3>Déjanos tu información de contacto y te avisaremos cuando se abran las inscripciones para este curso</h3>
                             </div>                              
                             <div v-if="errores.length > 0" class="alert alert-danger"><ul><li v-for="(error, index) in errores" :key="index">{{ error }}</li></ul></div>

@@ -12,7 +12,7 @@
                 <div class="icon icon-1 float-bob-x"></div>
                 <div class="icon icon-3"></div>
             </div> -->
-            <div class="container">
+            <div class="container d-none d-md-block">
                 <div class="row rounded" style="background-color: #dcf7ff;">
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column p-5" >
                         <div class="content-box">
@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content-box" style="color: #fff">
-                            <div class="sec-title style-two">
+                            <div class="sec-title style-two d-none d-md-block">
                                 <h1>Te proponemos verlo de otra manera</h1>
                             </div>
                             <div class="bold-text">La pasión de los niños por la tecnología puede utilizarse para su ventaja.</div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content-box text-center">
-                            <img src="/images/landings/madre-con-hija-y-computadora.jpg"/>
+                            <img src="/images/landings/nino-programando-2.jpg"/>
                         </div>
                     </div>                    
                 </div>
@@ -67,10 +67,11 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 content-column">
                         <div class="content-box">
                             <div class="sec-title style-two">
-                                <h1>¿Cómo lo hacemos?</h1>
+                                <h1>¿Cómo podemos ayudarte?</h1>
                             </div>
-                            <div class="bold-text">Ayudándoles a aprender uno de los pilares principales del desarrollo tecnológico de hoy día: el arte de la programación de computadoras.</div>
+                            <div class="bold-text">Escuelita.dev ayuda a los niños y jóvenes a aprender uno de los pilares principales del desarrollo tecnológico de hoy día: el arte de la programación de computadoras.</div>
                             <div class="bold-text">Apoyamos a tus chicos para que aprendan a Programar, y creen sus propias, historias, juegos, programas, aplicaciones... su imaginación es el límite</div>
+                            <div class="bold-text">Los cursos no tienen costo y están iniciando todo el año. ¡Entérate más abajo!</div>
                         </div>
                     </div>
                 </div>
