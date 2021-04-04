@@ -42,11 +42,11 @@
                                                 <h5>{{ curso.profesor.nombre }}</h5>
                                             </li>
                                             <li>
-                                                <h6>Categoría</h6>
-                                                <h5>Programación</h5>
+                                                <h6>Costo</h6>
+                                                <h5>SIN COSTO</h5>
                                             </li>
                                             <li class="btn-box">
-                                                <b-button :class="'theme-btn'" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
+                                                <b-button :class="'theme-btn'" style="font-size:22px" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
                                             </li>
                                         </ul>
                                     </div>
@@ -57,8 +57,24 @@
                                     </div>
                                     <div v-if="!!curso.Temario && !!curso.Temario.Modulo.length">
                                         <Temario :temario="curso.Temario"/>
-                                    </div>
+                                    </div>                                    
                                 </div>
+                                    <div class="info-box">
+                                        <ul class="clearfix">
+                                            <li>
+                                                <figure class="thumb-box"><img :src="getStrapiMedia(curso.profesor.foto.formats.thumbnail.url)" :alt="curso.profesor.nombre"></figure>
+                                                <h6>Docente</h6>
+                                                <h5>{{ curso.profesor.nombre }}</h5>
+                                            </li>
+                                            <li>
+                                                <h6>Costo</h6>
+                                                <h5>SIN COSTO</h5>
+                                            </li>
+                                            <li class="btn-box">
+                                                <b-button :class="'theme-btn'" style="font-size:22px" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
+                                            </li>
+                                        </ul>
+                                    </div>                                
                             </div>
                         </div>
                     </div>
