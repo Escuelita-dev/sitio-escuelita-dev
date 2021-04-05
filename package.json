@@ -19,6 +19,7 @@
     "markdown-it-modify-token": "^1.0.2",
     "moment": "^2.29.1",
     "nuxt": "^2.15.3",
+    "nuxt-amplitude-plugin": "^0.1.7",
     "nuxt-i18n": "^6.21.0",
     "swiper": "^6.5.3",
     "ufo": "^0.6.10",

@@ -149,6 +149,7 @@ export default {
                     Curso: this.curso.id
                 })
                 .then((response) => {
+                    this.$amplitude.logEvent('Inscripcion Interesado', {'curso': this.curso.nombre});
                     this.success = true;
                     this.errored = false;
                 })

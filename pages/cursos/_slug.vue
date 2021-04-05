@@ -130,9 +130,13 @@ export default {
             curso: cursos[0]
         };
     },
+    mounted() {
+        this.$amplitude.logEvent('Ve Curso', {'curso': this.curso.nombre});
+    },
     methods: {
         getStrapiMedia,
         abrirForm: function() {
+            this.$amplitude.logEvent('Click Inscripcion Curso', {'curso': this.curso.nombre});            
             this.$refs['formInteresado'].abrir();
         }
     }

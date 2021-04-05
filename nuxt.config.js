@@ -90,7 +90,10 @@ export default {
     ['@netsells/nuxt-hotjar', { 
       id: '2041320', 
       sv: '6',
-    }]
+    }],
+    ['nuxt-amplitude-plugin',
+      { apiKey: '6d2a3f757a6f48beab4ca89bc95136bc', config: {includeReferrer: true, includeUtm: true} }
+    ]
   ],
   i18n: {
     locales: [

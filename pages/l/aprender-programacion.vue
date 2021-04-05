@@ -177,6 +177,9 @@ export default {
             cursos: await $strapi.find("cursos"),
         }
     },
+    mounted() {
+        this.$amplitude.logEvent('Ve Landing', {'landing': '/l/aprender-programacion/'});
+    },
     methods: {
         getStrapiMedia,
     }
