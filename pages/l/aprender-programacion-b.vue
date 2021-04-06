@@ -193,7 +193,7 @@ export default {
         }
     },
     mounted() {
-        this.$amplitude.logEvent('Ve Landing', {'landing': '/l/aprender-programacion/'});
+        this.$amplitude.logEvent('Ve Landing', {'landing': '/l/aprender-programacion/', 'variante': 'b'});
     },
     methods: {
         getStrapiMedia,
