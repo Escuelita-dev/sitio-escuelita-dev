@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="page-title centred" style="background-image: url(/images/landings/fondo-mucha-pantalla.jpg);">
+        <section class="page-title centred d-none d-md-block" style="background-image: url(/images/landings/fondo-mucha-pantalla.jpg);">
             <div class="container">
                 <div class="content-box">
                     <h1>¿Tus hijos usan mucho las pantallas?</h1>
@@ -48,9 +48,11 @@
                             <div class="sec-title style-two d-none d-md-block">
                                 <h1>Te proponemos verlo de otra manera</h1>
                             </div>
+                            <img src="/images/landings/mucha-pantalla-cuadrado.png" class="d-block d-md-none my-2"/>
                             <div class="bold-text">La pasión de los niños por la tecnología puede utilizarse para su ventaja.</div>
-                            <div class="bold-text">En el futuro de tus hijos, la tecnología va a jugar un rol fundamental ¿por qué no apoyarlos para que la dominen y usen de forma constructiva desde ahora?</div>
-                            <div class="bold-text">En Escuelita.dev te ayudamos a utilizar la tecnología a favor de tus hijos. Los apoyamos para se conviertan en CREADORES de tecnología, se diviertan en el camino, y se preparen para un mejor futuro.</div>
+                            <div class="bold-text">En el futuro de tus hijos, la tecnología va a jugar un rol fundamental</div>
+                            <div class="bold-text">¿Por qué no apoyarlos para que la dominen y usen de forma constructiva desde ahora?</div>
+                            <div class="bold-text">En Escuelita.dev apoyamos a los niños y jóvenes para se conviertan en CREADORES de tecnología, se diviertan en el camino, y se preparen para un mejor futuro.</div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
