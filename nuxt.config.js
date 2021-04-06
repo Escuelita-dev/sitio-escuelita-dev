@@ -25,6 +25,9 @@ export default {
     ],
     script: [
       {
+        src: "https://www.googleoptimize.com/optimize.js?id=OPT-WGQD938"
+      },
+      {
         src: "/js/jquery.js"
       },
       {

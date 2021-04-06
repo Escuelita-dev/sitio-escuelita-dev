@@ -4,9 +4,7 @@
         <div style="background-image:url(/images/fondo-head-home-escuelita-escuela-programacion-niños.jpg)">
             <div class="container py-5">
                 <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/hohvxKYaFUY?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                  <div style="padding:70% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/533364367?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
         </div>
