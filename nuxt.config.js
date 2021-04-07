@@ -96,7 +96,14 @@ export default {
     }],
     ['nuxt-amplitude-plugin',
       { apiKey: '6d2a3f757a6f48beab4ca89bc95136bc', config: {includeReferrer: true, includeUtm: true} }
-    ]
+    ],
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: '176480920981296',
+      autoPageView: true,
+      disabled: false
+    }]
   ],
   i18n: {
     locales: [
