@@ -132,6 +132,7 @@ export default {
     },
     mounted() {
         this.$amplitude.logEvent('Ve Curso', {'curso': this.curso.nombre});
+        this.$fb.track('Ve Curso', {'curso': this.curso.nombre});
     },
     methods: {
         getStrapiMedia,

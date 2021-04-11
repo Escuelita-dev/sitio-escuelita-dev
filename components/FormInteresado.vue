@@ -150,6 +150,7 @@ export default {
                 })
                 .then((response) => {
                     this.$amplitude.logEvent('Inscripcion Interesado', {'curso': this.curso.nombre});
+                    this.$fb.track('Inscripcion Interesado', {'curso': this.curso.nombre});
                     this.success = true;
                     this.errored = false;
                 })

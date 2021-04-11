@@ -194,6 +194,7 @@ export default {
     },
     mounted() {
         this.$amplitude.logEvent('Ve Landing', {'landing': '/l/aprender-programacion/', 'variante': 'b'});
+        this.$fb.track('Ve Landing', {'landing': '/l/aprender-programacion/', 'variante': 'b'});
     },
     methods: {
         getStrapiMedia,
