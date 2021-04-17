@@ -118,7 +118,7 @@
 </template>
 
 <script>
-import { getStrapiMedia } from '../../utils/medias'
+import { getStrapiMedia } from '../../../utils/medias'
 
 export default {
     layout: 'internoSinCabezal',
