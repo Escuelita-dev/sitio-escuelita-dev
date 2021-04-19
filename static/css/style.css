@@ -7788,15 +7788,15 @@ h3 a:hover{
   margin-bottom: 0px;
 }
 
-.escuelita-form-section .escuelita-form .form-group .vue-tel-input
+.vue-tel-input, input[type='number']
 {
   /* position: relative;
-  display: block;
-  width: 100%; */
+  display: block;*/
+  width: 100%; 
   height: 60px;
   background: #fff;
   border: 3px solid #fff;
-  border-radius: 20px;
+  border-radius: 20px!important;
   padding: 10px 20px;
   font-size: 15px;
   color: #2b3c6b;

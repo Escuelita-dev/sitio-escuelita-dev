@@ -18,9 +18,9 @@
         </section>
         <section class="contact-form-section sec-pad">
             <div class="container">
-                <div class="sec-title centred">
-                    <h1>Déjanos un Mensaje</h1>
-                </div>
+                <!-- <div class="sec-title centred">
+                    <h1>Adulto responsable</h1>
+                </div> -->
                 <div class="row">
                     <div class="col-lg-8 col-md-12 col-sm-12 offset-lg-2 form-column">
                         <div v-if="submited && success" class="text-center">
@@ -32,26 +32,58 @@
                                 <div v-if="errores.length > 0" class="alert alert-danger"><ul><li v-for="(error, index) in errores" :key="index">{{ error }}</li></ul></div>
                                 <form id="contact-form" class="default-form"  @submit.stop.prevent="handleSubmit"> 
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                                            <input v-model="nombre" type="text" name="nombre" placeholder="Tu nombre*" required="" aria-required="true">
+                                        <div class="col-12 form-group">
+                                        <b-form-group v-slot="{ ariaDescribedby }">
+                                        <h2>Horario preferido</h2>    
+                                        <b-form-radio-group
+                                            id="radio-comision"
+                                            v-model="selected"
+                                            :options="comisiones"
+                                            :aria-describedby="ariaDescribedby"
+                                            name="radio-btn-stacked"
+                                            button-variant="outline-primary"                                            
+                                            buttons
+                                            stacked
+                                            size="lg"
+                                        ></b-form-radio-group>
+                                        </b-form-group>                                            
+                                            <!-- <b-form-group label="Elige el Horario Preferido" v-slot="{ ariaDescribedby }">
+                                            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="A" size="lg">Los Viernes a las 18:00hs <span>Comienza el Viernes 9 de Abril</span></b-form-radio>
+                                            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B" size="lg">Los Viernes a las 19:00hs <span>Comienza el Viernes 9 de Abril</span></b-form-radio>
+                                            </b-form-group>                 -->
+                                        </div>                        
+                                        <div class="col-12 form-group">                                        
+                                            <h2>Adulto Responsable</h2>
                                         </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                        <div class="col-12 form-group">
+                                            <input class="mb-0" v-model="nombre" type="text" name="nombre" placeholder="Nombre completo*" required="" aria-required="true">
+                                        </div>
+                                        <div class="col-12 col-md-6 form-group">
+                                            <vue-tel-input v-model="whatsapp" :inputOptions="{placeholder: 'Tu número de teléfono móvil'}"></vue-tel-input>
+                                        </div>
+                                        <div class="col-12 col-md-6 form-group">
                                             <input v-model="email" type="email" name="email" placeholder="Tu Email*" required="" aria-required="true">
                                         </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                                            <input v-model="whatsapp" type="text" name="whatsapp" placeholder="Tu número de teléfono móvil" required="" aria-required="true">
+                                        <div class="col-12 form-group">                                        
+                                            <h2>Estudiante</h2>
+                                        </div>                                        
+                                        <div class="col-12 form-group">
+                                            ¿Cuál es su país de nacimiento?
                                         </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                                            <input v-model="asunto" type="text" name="asunto" placeholder="Asunto" required="" aria-required="true">
+                                        <div class="col-12 form-group">
+                                            <CountrySelect v-model="de_donde"/>
+                                        </div>                                        
+                                        <div class="col-12 form-group">
+                                            <input class="mb-0" type="text" name="nombreEstudiante" placeholder="Nombre completo*">
                                         </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <input v-model="de_donde" type="text" name="de_donde" placeholder="¿De dónde eres?" required="" aria-required="true">
+                                        <div class="col-12 col-md-6 form-group">
+                                            <input type="email" name="emailEstudiante" placeholder="Email (si tiene)">
                                         </div>                                    
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea v-model="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
-                                        </div>
+                                            <div class="col-12 col-md-6 form-group">
+                                            <input type="number" name="edad" placeholder="Edad*">
+                                        </div>                                                                            
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn centred">
-                                            <button type="submit" class="theme-btn" name="submit-form">Enviar</button>
+                                            <button type="submit" class="theme-btn" name="submit-form">Reservar Lugar</button>
                                         </div>
                                     </div>
                                 </form>
@@ -90,7 +122,11 @@ export default {
             whatsapp: '',
             asunto: '',
             de_donde: '',
-            mensaje: ''
+            mensaje: '',
+            comisiones: [
+                { text: 'Los Viernes a las 18:00hs (Comienza el Viernes 9 de Abril)', value: '13' },
+                { text: 'Los Viernes a las 19:00hs (Comienza el Viernes 9 de Abril)', value: '14' },
+            ]
         }
     },
     methods: {
@@ -164,3 +200,12 @@ export default {
     }
 }
 </script>
+
+<style>
+    #radio-comision {
+        width: 100%
+    }
+    #radio-comision label {
+        white-space: normal;
+    }    
+</style>
