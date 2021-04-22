@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <!-- <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="subscribe-widget footer-widget">
                                 <h3 class="widget-title">Amigos de Escuelita.dev</h3>
                                 <div class="widget-content">
@@ -64,8 +64,8 @@
                                                 <div id="mce-responses" class="clear">
                                                     <div class="response" id="mce-error-response" style="display:none"></div>
                                                     <div class="response" id="mce-success-response" style="display:none"></div>
-                                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e66e067f7aed1f417ebf8672b_b2bdb8327d" tabindex="-1" value=""></div>
+                                                </div>  
+                                               <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e66e067f7aed1f417ebf8672b_b2bdb8327d" tabindex="-1" value=""></div>
 
                                                 <button type="submit" class="theme-btn" id="mc-embedded-subscribe">Subscribirme!</button>
 
@@ -75,7 +75,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
