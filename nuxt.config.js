@@ -90,6 +90,7 @@ export default {
     '@nuxtjs/markdownit',
     'bootstrap-vue/nuxt',
     'nuxt-i18n',
+    'vue-social-sharing/nuxt',    
     ['@netsells/nuxt-hotjar', { 
       id: '2041320', 
       sv: '6',
