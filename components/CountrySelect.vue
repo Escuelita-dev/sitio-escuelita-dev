@@ -33,10 +33,10 @@ export default {
 </script>
 
 <style>
-.vue-country-select .current {
+.country-select .vue-country-select .current {
     width: 100%!important;
 }
-.vue-country-select .current .dropdown-arrow {
+.country-select .vue-country-select .current .dropdown-arrow {
     position: absolute;
     right: 5px;
 }
@@ -59,7 +59,7 @@ export default {
   color: #2b3c6b;
   transition: all 500ms ease;
 }
-.vue-country-select {
+.country-select .vue-country-select {
   position: absolute;
   width: 90%;
 }
