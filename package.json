@@ -22,11 +22,12 @@
     "nuxt-amplitude-plugin": "^0.1.7",
     "nuxt-facebook-pixel-module": "^1.5.0",
     "nuxt-i18n": "^6.26.0",
-    "swiper": "^6.5.7",
+    "swiper": "^6.5.8",
     "ufo": "^0.6.11",
     "vue-awesome-swiper": "^4.1.1",
     "vue-country-code-select": "^1.6.7",
-    "vue-tel-input": "^5.2.0"
+    "vue-social-sharing": "^3.0.7",
+    "vue-tel-input": "^5.3.0"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0"

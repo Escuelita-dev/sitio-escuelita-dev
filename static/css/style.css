@@ -244,7 +244,7 @@ img{
   font-size: 15px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   padding: 17px 40px;
-  background-color: #ff7162!important;
+  background-color: #008BB0!important;
   line-height: 26px;
   color: #ffffff !important;
   font-weight: 900;
@@ -264,7 +264,7 @@ img{
   height: 100%;
   z-index: -1;
   opacity: 0;
-  background-color: #008BB0;
+  background-color: #ff7162;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -4475,7 +4475,6 @@ h3 a:hover{
 ***/
 
 /* page-title */
-
 .page-title{
   position: relative;
   display: block;
@@ -4484,6 +4483,10 @@ h3 a:hover{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.page-title.narrow {
+  padding: 0px 0px 48px 0px;
 }
 
 /* .page-title:before{
@@ -4498,6 +4501,10 @@ h3 a:hover{
 
 .page-title .content-box {
   padding-top: 143px;
+}
+
+.page-title.narrow .content-box {
+  padding-top: 43px;
 }
 
 .page-title .content-box h1{  
@@ -7788,15 +7795,15 @@ h3 a:hover{
   margin-bottom: 0px;
 }
 
-.escuelita-form-section .escuelita-form .form-group .vue-tel-input
+.vue-tel-input, input[type='number']
 {
   /* position: relative;
-  display: block;
-  width: 100%; */
+  display: block;*/
+  width: 100%; 
   height: 60px;
   background: #fff;
   border: 3px solid #fff;
-  border-radius: 20px;
+  border-radius: 20px!important;
   padding: 10px 20px;
   font-size: 15px;
   color: #2b3c6b;
@@ -7837,32 +7844,38 @@ h3 a:hover{
 }
 
 /** escuelita-form-section **/
-
-.contact-form-section{
+.contact-form-section, 
+.form-section {
   position: relative;
   display: block;
   background: #f0ede7;
 }
 
-.contact-form-section .sec-title{
+.contact-form-section .sec-title, 
+.form-section .sec-title {
   position: relative;
   display: block;
   margin-bottom: 40px;
 }
 
-.contact-form-section .contact-form .form-group{
+.contact-form-section .contact-form .form-group, 
+.form-section .form .form-group {
   position: relative;
   display: block;
   margin-bottom: 20px;
 }
 
-.contact-form-section .contact-form .form-group:last-child{
+.contact-form-section .contact-form .form-group:last-child, .form-section .form .form-group:last-child{
   margin-bottom: 0px;
 }
 
 .contact-form-section .contact-form .form-group input[type='text'],
 .contact-form-section .contact-form .form-group input[type='email'],
-.contact-form-section .contact-form .form-group textarea{
+.contact-form-section .contact-form .form-group textarea,
+.form-section .form .form-group input[type='text'],
+.form-section .form .form-group input[type='email'],
+.form-section .form .form-group textarea
+{
   position: relative;
   display: block;
   width: 100%;
@@ -7876,19 +7889,26 @@ h3 a:hover{
   transition: all 500ms ease;
 }
 
-.contact-form-section .contact-form .form-group textarea{
+.contact-form-section .contact-form .form-group textarea,
+.form-section .form .form-group textarea{
   height: 170px;
   resize: none;
   margin-bottom: 30px;
 }
 
 .contact-form-section .contact-form .form-group input:focus,
-.contact-form-section .contact-form .form-group textarea:focus{
+.contact-form-section .contact-form .form-group textarea:focus,
+.form-section .form .form-group input:focus,
+.form-section .form .form-group textarea:focus
+{
   border-color: #ff7162;
 }
 
 .contact-form-section .contact-form .form-group input::-webkit-input-placeholder,
-.contact-form-section .contact-form .form-group textarea::-webkit-input-placeholder{
+.contact-form-section .contact-form .form-group textarea::-webkit-input-placeholder
+.form-section .form .form-group input::-webkit-input-placeholder,
+.form-section .form .form-group textarea::-webkit-input-placeholder
+{
   color:#2b3c6b;
 }
 

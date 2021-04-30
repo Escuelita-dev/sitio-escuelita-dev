@@ -182,7 +182,7 @@ export default {
   },
   methods: {
       getStrapiMedia,
-      moment      
+      moment
   }
 }
 </script>

@@ -34,6 +34,7 @@
                                       <li><NuxtLink to="/blog">Blog</NuxtLink></li>
                                       <li><NuxtLink to="/acerca">Acerca</NuxtLink></li>
                                       <li><NuxtLink to="/preguntas-frecuentes">Preguntas</NuxtLink></li>
+                                      <li><a href="https://guia.escuelita.dev">Guia</a></li>                                      
                                       <li><NuxtLink to="/contacto">Contacto</NuxtLink></li>
                                     </ul>
                                 </div>

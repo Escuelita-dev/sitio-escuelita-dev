@@ -21,9 +21,6 @@
 
     <Nuxt />
 
-    <span class="d-none d-md-block">
-      <Footer />
-    </span>
   </span>
 </template>
 
