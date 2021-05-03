@@ -109,7 +109,48 @@
     </header>      
     
     <Nuxt />
-
+    <section class="fact-counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
+                    <div class="counter-block wow slideInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: slideInUp;">
+                        <div class="icon-box"><i class="flaticon-boy"></i></div>
+                        <div class="count-outer count-box counted">
+                            <span class="count-text" data-speed="1500" data-stop="750">60</span>
+                        </div>
+                        <div class="text">Estudiantes</div>
+                    </div>
+                </div>              
+                <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
+                    <div class="counter-block wow slideInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: slideInUp;">
+                        <div class="icon-box"><i class="flaticon-earth-globe"></i></div>
+                        <div class="count-outer count-box counted">
+                            <span class="count-text" data-speed="1500" data-stop="200">12</span>
+                        </div>
+                        <div class="text">Países</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
+                    <div class="counter-block wow slideInUp animated" data-wow-delay="100ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: slideInUp;">
+                        <div class="icon-box"><i class="flaticon-calendar"></i></div>
+                        <div class="count-outer count-box counted">
+                            <span class="count-text" data-speed="1500" data-stop="125">7</span>
+                        </div>
+                        <div class="text">Cursos Impartidos</div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
+                    <div class="counter-block wow slideInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: slideInUp;">
+                        <div class="icon-box"><i class="flaticon-flask"></i></div>
+                        <div class="count-outer count-box counted">
+                            <span class="count-text" data-speed="1500" data-stop="200">200</span>
+                        </div>
+                        <div class="text">Labs Project</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
     <Footer />
   </span>
 </template>
