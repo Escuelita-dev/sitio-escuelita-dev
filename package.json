@@ -22,7 +22,7 @@
     "nuxt-amplitude-plugin": "^0.1.7",
     "nuxt-facebook-pixel-module": "^1.5.0",
     "nuxt-i18n": "^6.26.0",
-    "swiper": "^6.5.8",
+    "swiper": "^6.5.9",
     "ufo": "^0.6.11",
     "vue-awesome-swiper": "^4.1.1",
     "vue-country-code-select": "^1.6.7",

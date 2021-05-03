@@ -25,6 +25,11 @@ export default {
     ],
     script: [
       {
+        src: "https://umami.mauri.co/umami.js",
+        async: true,
+        'data-website-id': '408b9351-2b94-45d1-b2ef-7c78b1bd5753'
+      },
+      {
         src: "https://www.googleoptimize.com/optimize.js?id=OPT-WGQD938"
       },
       {
