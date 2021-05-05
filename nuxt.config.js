@@ -84,7 +84,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/moment',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -111,6 +112,11 @@ export default {
       disabled: false
     }]
   ],
+  moment: {
+    timezone: true,
+    defaultLocale: 'es',
+    locales: ['es']
+  },
   i18n: {
     locales: [
       {

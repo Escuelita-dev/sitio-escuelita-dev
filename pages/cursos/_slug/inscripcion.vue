@@ -33,7 +33,9 @@
                                         <div class="col-12 form-group mt-5">
                                             <h2>Elige tu horario preferido para cursar</h2>    
                                             
-                                            <h5>Los horarios están en la hora de {{ formData.paisHorario.name }} <vue-country-code @onSelect="setearPaisHorario" :dropdownOptions="{disabledDialCode:true}" ref="vcc"></vue-country-code></h5>
+                                            <h5>Los horarios están en la hora de {{ currentTimezone }} 
+                                                <!-- <vue-country-code @onSelect="setearPaisHorario" :dropdownOptions="{disabledDialCode:true}" ref="vcc"></vue-country-code> -->
+                                            </h5>
                                         </div>
                                         <div class="col-12 form-group">
                                             <b-form-group v-slot="{ ariaDescribedby }">
@@ -48,7 +50,7 @@
                                                 size="lg"
                                                 @change="buscarCupos()"
                                             >
-                                                <b-form-radio v-for="unaComision in comisiones" :key="unaComision.value" :value="unaComision.value">{{unaComision.horario}}<div>{{ unaComision.comienzo }}</div></b-form-radio>
+                                                <b-form-radio v-for="unaComision in comisiones" :key="unaComision.value" :value="unaComision.value">{{ comisionFormatearHorario(unaComision.FechaComienzo)}}<div>Comienza el {{ comisionFormatearComienzo(unaComision.FechaComienzo) }}</div></b-form-radio>
 
                                             </b-form-radio-group>
                                             </b-form-group>                                            
@@ -179,16 +181,20 @@
 <script>
 import conf from '../../../utils/conf'
 import { getStrapiMedia } from '../../../utils/medias'
-
+import { firstToUpper } from '../../../utils/strings'
 
 export default {
     layout: 'landings',
     async asyncData ({ params, $strapi }) {
         const cursos = await $strapi.find("cursos", {
             slug: params.slug,
-        });
+        })
+        const comisiones = await $strapi.find("comisiones", {
+            'curso.slug': params.slug
+        })
         return {
-            curso: cursos[0]
+            curso: cursos[0],
+            comisiones
         };
     },    
     data: function() {
@@ -222,12 +228,28 @@ export default {
     computed: {
         urlCurso: function() {
             return this.$router.resolve({ name: 'cursos-slug', params: { slug: this.curso.slug } })
+        },
+        currentTimezone: function() {
+            return Intl.DateTimeFormat().resolvedOptions().timeZone
         }
     },
     methods: {
         getStrapiMedia,
+        firstToUpper,
         setearPaisHorario: function({name, iso2}) {
             this.formData.paisHorario = {name, iso2}
+        },
+        /**
+         * Ej: Los Viernes a las 18:00hs de Argentina
+         */
+        comisionFormatearHorario: function(fechaComienzo) {
+            return this.firstToUpper(this.$moment.tz(fechaComienzo).format('dddd')) + ' a las ' + this.$moment.tz(fechaComienzo).format('h:mm a')
+        },
+        /**
+         * Ej: Comienza el Viernes 9 de Abril
+         */
+        comisionFormatearComienzo: function(fechaComienzo) {        
+            return this.firstToUpper(this.$moment.tz(fechaComienzo).format('dddd D')) + ' de ' + this.firstToUpper(this.$moment(fechaComienzo).format('MMMM'))        
         },
         buscarCupos: function() {
             this.step1 = false
