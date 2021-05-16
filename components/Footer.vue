@@ -36,6 +36,7 @@
                                       <li><NuxtLink to="/preguntas-frecuentes">Preguntas</NuxtLink></li>
                                       <li><a href="https://guia.escuelita.dev">Guia</a></li>                                      
                                       <li><NuxtLink to="/contacto">Contacto</NuxtLink></li>
+                                      <li><NuxtLink to="/politica-de-privacidad">Política de Privacidad</NuxtLink></li>                                      
                                     </ul>
                                 </div>
                             </div>
