@@ -41,10 +41,6 @@
                                                 <h6>Docente</h6>
                                                 <h5>{{ curso.profesor.nombre }}</h5>
                                             </li>
-                                            <li>
-                                                <h6>Costo</h6>
-                                                <h5>SIN COSTO</h5>
-                                            </li>
                                             <li class="btn-box">
                                                 <b-button :class="'theme-btn'" style="font-size:22px" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
                                             </li>
@@ -66,10 +62,6 @@
                                                 <h6>Docente</h6>
                                                 <h5>{{ curso.profesor.nombre }}</h5>
                                             </li>
-                                            <li>
-                                                <h6>Costo</h6>
-                                                <h5>SIN COSTO</h5>
-                                            </li>
                                             <li class="btn-box">
                                                 <b-button :class="'theme-btn'" style="font-size:22px" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
                                             </li>
@@ -82,10 +74,6 @@
                         <div class="class-details-sidebar">
                             <div class="inner-box">
                                 <ul class="info-list">
-                                    <li>
-                                        <h5>Costo</h5>
-                                        <span>Gratuito</span>
-                                    </li>
                                     <li>
                                         <h5>Modalidad:</h5>
                                         <span>Por Videoconferencia (Zoom)</span>

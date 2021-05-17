@@ -21,7 +21,7 @@
             <ul class="info-box">
                 <li><span>{{ curso.edades }}</span></li>
                 <li><span>{{ curso.cupo_estudiantes }} cupos</span></li>
-                <li><span>GRATUITO</span></li>                
+                <!-- <li><span>GRATUITO</span></li>                 -->
             </ul>
             </NuxtLink>
         </div>
