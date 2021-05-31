@@ -3,7 +3,7 @@
     <div class="inner-block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
         <figure class="image-box">
             <NuxtLink :to="{ name: 'cursos-slug', params: { slug: curso.slug } }">
-                <img :src="cdnUri + curso.imagen_tarjeta.url" :alt="curso.nombre">
+                <img :src="$config.strapiBaseUri + curso.imagen_tarjeta.url" :alt="curso.nombre">
             </NuxtLink>
         </figure>
         <div class="lower-content">
@@ -31,14 +31,7 @@
 
 
 <script>  
-import conf from '../utils/conf'
-
 export default {
-    data: function () {
-        return {
-        cdnUri: conf.strapiBaseUri
-        }
-    },
     props: {
         curso: {
             type: Object,

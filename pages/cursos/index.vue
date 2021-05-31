@@ -23,16 +23,11 @@
 </template>
 
 <script>
-import { getStrapiMedia } from '../../utils/medias'
-
 export default {
   async asyncData ({ $strapi }) {
     return { 
         cursos: await $strapi.find("cursos"),
     }
-  },    
-  methods: {
-      getStrapiMedia
-  }    
+  }
 }
 </script>

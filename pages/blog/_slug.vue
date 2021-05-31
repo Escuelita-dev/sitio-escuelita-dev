@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--Page Title-->
-    <section class="page-title centred" :style="'background-image: url('+ getStrapiMedia(noticia.ImagenCabezal.url) +');'">
+    <section class="page-title centred" :style="'background-image: url('+ getStrapiMedia(noticia.ImagenCabezal.url, $config.strapiBaseUri) +');'">
         <div class="container">
             <div class="content-box">
                 <h1>{{ noticia.titulo }}</h1>

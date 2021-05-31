@@ -2,12 +2,12 @@
     <div>
         <FormInteresado ref="formInteresado" :curso="curso"/>
         <!--Page Title-->
-        <section class="page-title centred" :style="'background-image: url('+ getStrapiMedia(curso.imagen_cabezal.url) +');'">
+        <section class="page-title centred" :style="'background-image: url('+ getStrapiMedia(curso.imagen_cabezal.url, $config.strapiBaseUri) +');'">
             <div class="position-absolute w-100 h-100 opacity-4 bg-dark"></div>
             <div class="content-box">
                 <div class="row">
                     <div clasS="col-md-4">
-                        <img class="rounded" :src="getStrapiMedia(curso.imagen_tarjeta.url)" :alt="curso.nombre">
+                        <img class="rounded" :src="getStrapiMedia(curso.imagen_tarjeta.url, $config.strapiBaseUri)" :alt="curso.nombre">
                     </div>
                     <div class="col-md-8 text-md-left">
                         <h1>{{ curso.nombre }}</h1>
@@ -37,7 +37,7 @@
                                     <div class="info-box">
                                         <ul class="clearfix">
                                             <li>
-                                                <figure class="thumb-box"><img :src="getStrapiMedia(curso.profesor.foto.formats.thumbnail.url)" :alt="curso.profesor.nombre"></figure>
+                                                <figure class="thumb-box"><img :src="getStrapiMedia(curso.profesor.foto.formats.thumbnail.url, $config.strapiBaseUri)" :alt="curso.profesor.nombre"></figure>
                                                 <h6>Docente</h6>
                                                 <h5>{{ curso.profesor.nombre }}</h5>
                                             </li>
@@ -58,7 +58,7 @@
                                     <div class="info-box">
                                         <ul class="clearfix">
                                             <li>
-                                                <figure class="thumb-box"><img :src="getStrapiMedia(curso.profesor.foto.formats.thumbnail.url)" :alt="curso.profesor.nombre"></figure>
+                                                <figure class="thumb-box"><img :src="getStrapiMedia(curso.profesor.foto.formats.thumbnail.url, $config.strapiBaseUri)" :alt="curso.profesor.nombre"></figure>
                                                 <h6>Docente</h6>
                                                 <h5>{{ curso.profesor.nombre }}</h5>
                                             </li>

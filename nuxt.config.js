@@ -1,9 +1,10 @@
-import conf from './utils/conf'
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  publicRuntimeConfig: {
+    strapiBaseUri: process.env.API_URL || 'https://strapi.escuelita.dev',
+    strapiCdnBaseUri: process.env.API_URL || "https://strapi.escuelita.dev",
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Escuelita.dev - Escuela de Programación para niños y jóvenes',
@@ -136,7 +137,7 @@ export default {
   },
   strapi: {
     entities: ['profesors', 'cursos'],
-    url: conf.strapiBaseUri
+    url: process.env.API_URL || 'https://strapi.escuelita.dev',
   },
   markdownit: {
     linkify: true,

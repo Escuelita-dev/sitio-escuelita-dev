@@ -4,7 +4,7 @@
             <div class="inner-box">
                 <figure class="image-box">
                     <NuxtLink :to="{ name: 'blog-slug', params: { slug: noticia.slug } }">
-                        <img :src="getStrapiMedia(noticia.ImagenTarjeta.url)" :alt="noticia.titulo">
+                        <img :src="getStrapiMedia(noticia.ImagenTarjeta.url, $config.strapiBaseUri)" :alt="noticia.titulo">
                     </NuxtLink>                                
                 </figure>
                 <div class="lower-content">
