@@ -1,6 +1,10 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  generate: {
+    fallback: true,
+    exclude: [/^(?=.*\inscripcion\b).*$/]
+  },
   publicRuntimeConfig: {
     baseUrl: process.env.BASE_URL || 'https://escuelita.dev',
     strapiBaseUri: process.env.API_URL || 'https://strapi.escuelita.dev',
