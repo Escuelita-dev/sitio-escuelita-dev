@@ -33,9 +33,7 @@
                                         <div class="col-12 form-group mt-5">
                                             <h2>Elige tu horario preferido para cursar</h2>    
                                             
-                                            <h5>Los horarios están en la hora de {{ currentTimezone }} 
-                                                <!-- <vue-country-code @onSelect="setearPaisHorario" :dropdownOptions="{disabledDialCode:true}" ref="vcc"></vue-country-code> -->
-                                            </h5>
+                                            <h5>Los horarios están en la hora de {{ currentTimezone }}</h5>
                                         </div>
                                         <div class="col-12 form-group">
                                             <b-form-group v-slot="{ ariaDescribedby }">
@@ -50,8 +48,7 @@
                                                 size="lg"
                                                 @change="buscarCupos()"
                                             >
-                                                <b-form-radio v-for="unaComision in comisiones" :key="unaComision.value" :value="unaComision.value">{{ comisionFormatearHorario(unaComision.FechaComienzo)}}<div>Comienza el {{ comisionFormatearComienzo(unaComision.FechaComienzo) }}</div></b-form-radio>
-
+                                                <b-form-radio v-for="unaComision in comisiones" :key="unaComision.id" :value="unaComision.id">{{ comisionFormatearHorario(unaComision.FechaComienzo)}}<div>Comienza el {{ comisionFormatearComienzo(unaComision.FechaComienzo) }}</div></b-form-radio>
                                             </b-form-radio-group>
                                             </b-form-group>                                            
                                         </div>  
@@ -97,7 +94,7 @@
                                             <input v-model="formData.edadEstudiante" type="number" name="edad" placeholder="Edad*">
                                         </div>                                                                            
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn centred">
-                                            <button class="theme-btn mt-4" name="submit-form">Reservar Lugar</button>
+                                            <button class="theme-btn mt-4" name="submit-form">Hacer Inscripción</button>
                                         </div>
                                     </div>
                                     <div class="row" v-if="step4">
