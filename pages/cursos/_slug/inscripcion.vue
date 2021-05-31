@@ -54,29 +54,35 @@
                                         </div>  
                                     </div>
                                     <div class="row" v-if="step2">
-                                        <div v-if="!cuposDisponibles" class="col-12 form-group mt-5 text-center">
+                                        <div v-if="buscandoCupos" class="col-12 form-group mt-5 text-center">
                                             <h2>Buscando Cupos Disponibles</h2>
                                             <b-spinner variant="success" label="Spinning"></b-spinner>
                                         </div>
-                                        <div v-else class="col-12 form-group mt-5 text-center">
+                                        <div v-else-if="cuposDisponibles" class="col-12 form-group mt-5 text-center">
                                             <i class="far fa-check-circle fa-5x" style="color:green"></i>
                                             <h2>¡Felicidades!</h2>
                                             <h2>Hay un lugar disponible en el curso</h2><h2>¿Quieres reservarlo?</h2>                                            
                                             <button class="theme-btn mt-4" name="submit-form" @click="tomarCupo()">Sí, tomar el Cupo</button>
                                         </div>
+                                        <div v-else class="col-12 form-group mt-5 text-center">
+                                            <i class="far fa-frown-open fa-5x" style="color:red"></i>
+                                            <h2>Ouch!</h2>
+                                            <h2>Lamentablemente ya se agotaron los cupos para esta comisión del curso</h2>
+                                            <p>Te estaremos invitando para la siguiente edición en un par de meses</p>
+                                        </div>                                        
                                     </div>                                                         
                                     <div class="row" v-if="step3">
                                         <div class="col-12 form-group mt-5">                                        
                                             <h2>Información del Adulto Responsable</h2>
                                         </div>
                                         <div class="col-12 form-group">
-                                            <input class="mb-0" v-model="formData.nombreAdulto" type="text" name="nombre" placeholder="Nombre completo*" required="" aria-required="true">
+                                            <input class="mb-0" v-model="formData.NombreAdulto" type="text" name="nombre" placeholder="Nombre completo*" required="" aria-required="true">
                                         </div>
                                         <div class="col-12 col-md-6 form-group">
-                                            <vue-tel-input v-model="formData.whatsappAdulto" :inputOptions="{placeholder: 'Tu número de teléfono móvil'}"></vue-tel-input>
+                                            <vue-tel-input v-model="formData.TelefonoMovilAdulto" :inputOptions="{placeholder: 'Tu número de teléfono móvil'}"></vue-tel-input>
                                         </div>
                                         <div class="col-12 col-md-6 form-group">
-                                            <input v-model="formData.emailAdulto" type="email" name="email" placeholder="Tu Email*" required="" aria-required="true">
+                                            <input v-model="formData.EmailAdulto" type="email" name="email" placeholder="Tu Email*" required="" aria-required="true">
                                         </div>
                                         <div class="col-12 form-group mt-5">                                        
                                             <h2>Información del Estudiante</h2>
@@ -85,13 +91,13 @@
                                             ¿Cuál es su país de nacimiento?
                                         </div>
                                         <div class="col-12 form-group">
-                                            <CountrySelect v-model="formData.paisNacimientoEstudiante"/>
+                                            <CountrySelect v-model="formData.Pais"/>
                                         </div>                                        
                                         <div class="col-6 form-group">
-                                            <input v-model="formData.nombreEstudiante" class="mb-0" type="text" name="nombreEstudiante" placeholder="Nombre completo*">
+                                            <input v-model="formData.Nombre" class="mb-0" type="text" name="Nombre" placeholder="Nombre completo*">
                                         </div>
                                             <div class="col-6 form-group">
-                                            <input v-model="formData.edadEstudiante" type="number" name="edad" placeholder="Edad*">
+                                            <input v-model="formData.Edad" type="number" name="edad" placeholder="Edad*">
                                         </div>                                                                            
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn centred">
                                             <button class="theme-btn mt-4" name="submit-form">Hacer Inscripción</button>
@@ -105,36 +111,36 @@
                                         <div v-else class="col-12 form-group mt-5 text-center">
                                             <i class="far fa-check-circle fa-5x" style="color:green"></i>
                                             <h2>¡Felicidades!</h2>
-                                            <h2>Se completó la inscripción de {{ formData.nombreEstudiante }} para el Curso {{ curso.nombre }}</h2>
+                                            <h2>Se completó la inscripción de {{ formData.Nombre }} para el Curso {{ curso.nombre }}</h2>
 
                                             <div class="inner-box mt-4">
                                                 <h3>¿Sientes orgullo? ¡Compártelo!</h3>
                                                 <ShareNetwork
                                                     network="facebook"
                                                     :url="`${urlCurso}?utm_source=facebook&utm_campaign=inscripcion`"
-                                                    :title="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
-                                                    :description="`${ formData.nombreEstudiante } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
-                                                    :quote="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :title="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :description="`${ formData.Nombre } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
+                                                    :quote="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
                                                     hashtags="PrepararseParaElFuturo, CursoProgramacion"
                                                 >
                                                     <b-button class="btn btn-hover-secondary btn-width-100 my-2" variant="primary" style="background-color: #1877f2!important"><i class="fab fa-facebook-f social-link-icon mx-2"></i>Facebook</b-button>
                                                 </ShareNetwork>
                                                 <ShareNetwork
                                                     network="linkedin"
-                                                    :url="`${urlCurso}?utm_source=facebook&utm_campaign=inscripcion`"
-                                                    :title="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
-                                                    :description="`${ formData.nombreEstudiante } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
-                                                    :quote="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :url="`${urlCurso}?utm_source=linkedin&utm_campaign=inscripcion`"
+                                                    :title="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :description="`${ formData.Nombre } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
+                                                    :quote="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
                                                     hashtags="PrepararseParaElFuturo, CursoProgramacion"
                                                 >
                                                     <b-button class="btn btn-hover-secondary btn-width-100 my-2" variant="primary" style="background-color: #0a66c2!important"><i class="fab fa-linkedin social-link-icon mx-2"></i> Linkedin</b-button>
                                                 </ShareNetwork>
                                                 <ShareNetwork
                                                     network="twitter"
-                                                    :url="`${urlCurso}?utm_source=facebook&utm_campaign=inscripcion`"
-                                                    :title="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
-                                                    :description="`${ formData.nombreEstudiante } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
-                                                    :quote="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :url="`${urlCurso}?utm_source=twitter&utm_campaign=inscripcion`"
+                                                    :title="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :description="`${ formData.Nombre } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
+                                                    :quote="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
                                                     hashtags="PrepararseParaElFuturo, CursoProgramacion"
                                                 >
                                                     <b-button class="btn btn-hover-secondary btn-width-100 my-2" variant="primary" style="background-color: #1da1f2!important"><i class="fab fa-twitter social-link-icon mx-2"></i> Twitter</b-button>
@@ -142,20 +148,20 @@
 
                                                 <ShareNetwork
                                                     network="whatsapp"
-                                                    :url="`${urlCurso}?utm_source=facebook&utm_campaign=inscripcion`"
-                                                    :title="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
-                                                    :description="`${ formData.nombreEstudiante } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
-                                                    :quote="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :url="`${urlCurso}?utm_source=whatsapp&utm_campaign=inscripcion`"
+                                                    :title="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :description="`${ formData.Nombre } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
+                                                    :quote="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
                                                     hashtags="PrepararseParaElFuturo, CursoProgramacion"
                                                 >
                                                     <b-button class="btn btn-hover-secondary btn-width-100 my-2" variant="primary" style="background-color: #25d366!important"><i class="fab fa-whatsapp social-link-icon mx-2"></i> Whatsapp</b-button>                    
                                                 </ShareNetwork>
                                                 <ShareNetwork
                                                     network="telegram"
-                                                    :url="`${urlCurso}?utm_source=facebook&utm_campaign=inscripcion`"
-                                                    :title="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
-                                                    :description="`${ formData.nombreEstudiante } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
-                                                    :quote="`${ formData.nombreEstudiante } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :url="`${urlCurso}?utm_source=telegram&utm_campaign=inscripcion`"
+                                                    :title="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
+                                                    :description="`${ formData.Nombre } sigue estudiando! Se anotó a un curso de Programación en Escuelita.dev :)`"
+                                                    :quote="`${ formData.Nombre } se inscribió al curso ${curso.nombre} en Escuelita.dev!`"
                                                     hashtags="PrepararseParaElFuturo, CursoProgramacion"
                                                 >
                                                     <b-button class="btn btn-hover-secondary btn-width-100 my-2" variant="primary" style="background-color: #0088cc!important"><i class="fab fa-telegram-plane social-link-icon mx-2"></i> Telegram</b-button>                    
@@ -177,7 +183,6 @@
 
 <script>
 import conf from '../../../utils/conf'
-import { getStrapiMedia } from '../../../utils/medias'
 import { firstToUpper } from '../../../utils/strings'
 
 export default {
@@ -203,35 +208,35 @@ export default {
             formData: {
                 paisHorario: {},
                 comision: '',
-                nombreAdulto: '',
-                whatsappAdulto: '',
-                emailAdulto: '',
-                nombreEstudiante: '',
-                paisNacimientoEstudiante: '',
-                edadEstudiante: ''
+                NombreAdulto: '',
+                TelefonoMovilAdulto: '',
+                EmailAdulto: '',
+                Nombre: '',
+                Pais: '',
+                Edad: ''
             },
             inscripcionConfirmada: false,
             cuposDisponibles: false,
+            buscandoCupos: true,
             submited: false,
             success: false,
             errored: false,
             errores: [],
-            comisiones: [
-                { horario: 'Los Viernes a las 18:00hs de Argentina', comienzo: 'Comienza el Viernes 9 de Abril', value: '13' },
-                { horario: 'Los Viernes a las 19:00hs de Argentina',  comienzo: 'Comienza el Viernes 9 de Abril', value: '14' },
-            ]
+            // comisiones: [
+            //     { horario: 'Los Viernes a las 18:00hs de Argentina', comienzo: 'Comienza el Viernes 9 de Abril', value: '13' },
+            //     { horario: 'Los Viernes a las 19:00hs de Argentina',  comienzo: 'Comienza el Viernes 9 de Abril', value: '14' },
+            // ]
         }
     },
     computed: {
         urlCurso: function() {
-            return this.$router.resolve({ name: 'cursos-slug', params: { slug: this.curso.slug } })
+            return this.$config.baseUrl + this.$router.resolve({ name: 'cursos-slug', params: { slug: this.curso.slug } }).href
         },
         currentTimezone: function() {
             return Intl.DateTimeFormat().resolvedOptions().timeZone
         }
     },
     methods: {
-        getStrapiMedia,
         firstToUpper,
         setearPaisHorario: function({name, iso2}) {
             this.formData.paisHorario = {name, iso2}
@@ -240,20 +245,25 @@ export default {
          * Ej: Los Viernes a las 18:00hs de Argentina
          */
         comisionFormatearHorario: function(fechaComienzo) {
-            return this.firstToUpper(this.$moment.tz(fechaComienzo).format('dddd')) + ' a las ' + this.$moment.tz(fechaComienzo).format('h:mm a')
+            return this.firstToUpper(this.$moment(fechaComienzo).format('dddd')) + ' a las ' + this.$moment(fechaComienzo).format('h:mm a')
         },
         /**
          * Ej: Comienza el Viernes 9 de Abril
          */
         comisionFormatearComienzo: function(fechaComienzo) {        
-            return this.firstToUpper(this.$moment.tz(fechaComienzo).format('dddd D')) + ' de ' + this.firstToUpper(this.$moment(fechaComienzo).format('MMMM'))        
+            return this.firstToUpper(this.$moment(fechaComienzo).format('dddd D')) + ' de ' + this.firstToUpper(this.$moment(fechaComienzo).format('MMMM'))        
         },
         buscarCupos: function() {
             this.step1 = false
             this.step2 = true
             var v = this
-            setTimeout(function () {
-                v.cuposDisponibles = true
+            setTimeout(async function () {
+                // const comision = v.comisiones.find((comision) => comision.id=v.formData.comision)
+                const cuentaAlumnos = await v.$strapi.count("alumnos", {
+                    comisiones: [v.formData.comision]
+                });
+                v.cuposDisponibles = cuentaAlumnos < (v.curso.cupo_estudiantes + 5)
+                v.buscandoCupos = false
             }, 3000)
         },        
         tomarCupo: function() {
@@ -264,22 +274,22 @@ export default {
             this.errores = []
             this.errored = false
 
-            if(!this.formData.nombreAdulto) {
+            if(!this.formData.NombreAdulto) {
                 this.errores.push('Ingresa el nombre del adulto responsable')
             }
-            if(!this.formData.whatsappAdulto) {
+            if(!this.formData.TelefonoMovilAdulto) {
                 this.errores.push('Ingresa el teléfono móvil del adulto responsable')
             }
-            if(!this.formData.emailAdulto) {
+            if(!this.formData.EmailAdulto) {
                 this.errores.push('Ingresa el email del adulto responsable')
             }
-            if(!this.formData.paisNacimientoEstudiante) {
+            if(!this.formData.Pais) {
                 this.errores.push('Ingresa el país del estudiante')
             }
-            if(!this.formData.nombreEstudiante) {
+            if(!this.formData.Nombre) {
                 this.errores.push('Ingresa el nombre del estudiante')
             }            
-            if(!this.formData.edadEstudiante) {
+            if(!this.formData.Edad) {
                 this.errores.push('Ingresa la edad del estudiante')
             }
 
@@ -296,7 +306,7 @@ export default {
                 return
             }
 
-            // this.enviar()
+            this.enviar()
             
             this.step3 = false
             this.step4 = true
@@ -312,13 +322,13 @@ export default {
             }            
             else {
                 this.$axios
-                .post(conf.strapiBaseUri + "/mensajes", {
-                    Nombre: this.nombre,
-                    Whatsapp: this.whatsapp,
-                    Email: this.email,
-                    DeDonde: this.de_donde,
-                    Asunto: this.asunto,
-                    Mensaje: this.mensaje,
+                .post(this.$config.strapiBaseUri + "/alumnos/inscripcion", {
+                    NombreAdulto: this.formData.NombreAdulto,
+                    TelefonoMovilAdulto: this.formData.TelefonoMovilAdulto,
+                    EmailAdulto: this.formData.EmailAdulto,
+                    Nombre: this.formData.Nombre,
+                    Edad: this.formData.Edad,
+                    Pais: this.formData.Pais,
                 })
                 .then((response) => {
                     this.success = true;

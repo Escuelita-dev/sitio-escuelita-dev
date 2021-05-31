@@ -2,6 +2,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   publicRuntimeConfig: {
+    baseUrl: process.env.BASE_URL || 'https://escuelita.dev',
     strapiBaseUri: process.env.API_URL || 'https://strapi.escuelita.dev',
     strapiCdnBaseUri: process.env.API_URL || "https://strapi.escuelita.dev",
   },
