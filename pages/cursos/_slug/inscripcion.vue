@@ -329,6 +329,7 @@ export default {
                     Nombre: this.formData.Nombre,
                     Edad: this.formData.Edad,
                     Pais: this.formData.Pais,
+                    comisiones: [this.formData.comision]
                 })
                 .then((response) => {
                     this.success = true;
