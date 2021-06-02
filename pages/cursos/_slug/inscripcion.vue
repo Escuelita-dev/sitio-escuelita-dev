@@ -61,7 +61,7 @@
                                         <div v-else-if="cuposDisponibles" class="col-12 form-group mt-5 text-center">
                                             <i class="far fa-check-circle fa-5x" style="color:green"></i>
                                             <h2>¡Felicidades!</h2>
-                                            <h2>Hay un lugar disponible en el curso</h2><h2>¿Quieres reservarlo?</h2>                                            
+                                            <h2>Hay {{ cuposDisponibles }} {{ `${cuposDisponibles === 1 ? 'lugar disponible' : 'lugares disponibles'}` }} en el curso</h2><h2>¿Quieres reservar tu lugar?</h2>
                                             <button class="theme-btn mt-4" name="submit-form" @click="tomarCupo()">Sí, tomar el Cupo</button>
                                         </div>
                                         <div v-else class="col-12 form-group mt-5 text-center">
@@ -262,7 +262,7 @@ export default {
                 const cuentaAlumnos = await v.$strapi.count("alumnos", {
                     comisiones: [v.formData.comision]
                 });
-                v.cuposDisponibles = cuentaAlumnos < (v.curso.cupo_estudiantes + 5)
+                v.cuposDisponibles = v.curso.cupo_estudiantes - cuentaAlumnos
                 v.buscandoCupos = false
             }, 3000)
         },        
