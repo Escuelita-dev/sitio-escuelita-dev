@@ -58,7 +58,7 @@
                                             <h2>Buscando Cupos Disponibles</h2>
                                             <b-spinner variant="success" label="Spinning"></b-spinner>
                                         </div>
-                                        <div v-else-if="cuposDisponibles" class="col-12 form-group mt-5 text-center">
+                                        <div v-else-if="cuposDisponibles > 0" class="col-12 form-group mt-5 text-center">
                                             <i class="far fa-check-circle fa-5x" style="color:green"></i>
                                             <h2>¡Felicidades!</h2>
                                             <h2>Hay {{ cuposDisponibles }} {{ `${cuposDisponibles === 1 ? 'lugar disponible' : 'lugares disponibles'}` }} en el curso</h2><h2>¿Quieres reservar tu lugar?</h2>
@@ -216,7 +216,7 @@ export default {
                 Edad: ''
             },
             inscripcionConfirmada: false,
-            cuposDisponibles: false,
+            cuposDisponibles: 0,
             buscandoCupos: true,
             submited: false,
             success: false,
