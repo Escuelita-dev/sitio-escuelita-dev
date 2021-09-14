@@ -22,7 +22,7 @@
                 </li>
                 <li>
                     <i class="fas fa-user"></i>
-                    <a href="https://campusito.escuelita.dev/">Ingreso Alumnos</a>
+                    <a href="https://campusito.escuelita.dev/login">Ingreso Alumnos</a>
                 </li>
               </ul>
             </div>
