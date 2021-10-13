@@ -19,7 +19,7 @@
                                 <h3 class="widget-title">¿Qué es Escuelita.dev?</h3>
                                 <div class="widget-content">
                                     <div class="text">
-                                        <p>Somos una Escuelita sin fines de lucro que enseña programación a niños, niñas y jóvenes de todo el mundo.</p>
+                                        <p>Somos una Empresa de Impacto Social que enseña programación a niños, niñas y jóvenes de todo el mundo.</p>
                                         <p>Nuestra misión es ayudar a niños y jóvenes a aprender programación para que puedan ser más felices ahora y tener un mejor futuro.</p>
                                     </div>
                                 </div>
