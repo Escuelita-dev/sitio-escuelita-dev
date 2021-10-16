@@ -42,7 +42,7 @@
                                                 <h5>{{ curso.profesor.nombre }}</h5>
                                             </li>
                                             <li class="btn-box">
-                                                <b-button :class="'theme-btn'" style="font-size:22px" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
+                                                <b-button :class="'theme-btn'" style="font-size:22px" @click="abrirForm">QUIERO MÁS INFORMACIÓN</b-button>
                                             </li>
                                         </ul>
                                     </div>
@@ -63,7 +63,7 @@
                                                 <h5>{{ curso.profesor.nombre }}</h5>
                                             </li>
                                             <li class="btn-box">
-                                                <b-button :class="'theme-btn'" style="font-size:22px" @click="abrirForm">HACER INSCRIPCIÓN</b-button>
+                                                <b-button :class="'theme-btn'" style="font-size:22px" @click="abrirForm">QUIERO MÁS INFORMACIÓN</b-button>
                                             </li>
                                         </ul>
                                     </div>                                
