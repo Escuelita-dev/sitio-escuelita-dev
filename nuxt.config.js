@@ -70,6 +70,11 @@ export default {
       },
       {
         src: "/js/script.js"
+      },
+      {
+        src: "https://d335luupugsy2.cloudfront.net/js/loader-scripts/602c1b4a-fe13-4402-a4d8-5134010fefbc-loader.js",
+        async: true,
+        body: true
       }
     ]
   },
